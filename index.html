@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bloco de notas simples com salvamento automático no navegador.">
     <title>Bloco de Notas Moderno</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Bloco de Notas do Joédio</h1>
-        <p>Suas anotações são salvas automaticamente no seu navegador.</p>
-        
-        <textarea id="blocoDeNotas" placeholder="Comece a digitar aqui..."></textarea>
-    </div>
+    <main class="container">
+        <header>
+            <h1>Bloco de Notas do Joédio</h1>
+            <p>Suas anotações são salvas automaticamente no seu navegador.</p>
+        </header>
 
-    <script src="script.js"></script>
+        <label for="blocoDeNotas" class="sr-only">Conteúdo da nota</label>
+        <textarea id="blocoDeNotas" placeholder="Comece a digitar aqui..." rows="10"></textarea>
+
+        <div class="actions">
+            <button id="limparNota" type="button">Limpar nota</button>
+            <span id="statusMensagem" class="status" aria-live="polite"></span>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
